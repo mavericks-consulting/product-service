@@ -4,7 +4,16 @@ const app = express()
 
 app.get("/products", (request, response) => {
   const products = require('./products.json')
-  response.send(products)
+  let filteredProducts = products
+  if(request.query.ids) {
+    let ids = request.query.ids.split(',')
+    filteredProducts = products.filter(product => {
+      return ids.some(id=>{
+        return product.id === id
+      })
+    })
+  }
+  response.send(filteredProducts)
 })
 
 app.get("/products/:id", (request, response) => {
