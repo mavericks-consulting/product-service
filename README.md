@@ -4,6 +4,10 @@ This is a simple nodeJS based service which gives products info.
 
 GET /products <br/>
 
+## Pre-requisites
+* Git
+* Node >=8.4.0
+
 To set up make sure you have node installed. Run the following command for first time setup<br/>
 `npm install`
 <br/>
