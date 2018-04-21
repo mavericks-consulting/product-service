@@ -2,6 +2,10 @@
 const express = require('express')
 const app = express()
 
+app.get("/health", (request, response) => {
+  response.set('Cache-Control', 'no-cache').status(200).send("OK")
+})
+
 app.get("/products", (request, response) => {
   const products = require('./products.json')
   let filteredProducts = products
