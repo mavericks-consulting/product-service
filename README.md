@@ -2,6 +2,7 @@
 
 This is a simple nodeJS based service which gives products info.
 
+GET /health <br/>
 GET /products <br/>
 
 ## Pre-requisites
